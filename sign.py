@@ -20,7 +20,8 @@ def check(str):
 # 根据你的邮箱和密码修改email和password的值
 email = 'your email'
 password = 'your password'
-loginurl = 'https://liangchenyun.xyz/auth/login'
+loginurl = 'https://saocaozuo.me/auth/login'
+
 # 这行代码是用来维持cookie的，你后续的操作都不用担心cookie，他会自动带上相应的cookie
 s = requests.Session()
 # 带表单的参数
@@ -32,7 +33,7 @@ r = s.get(loginurl)
 # print(r.text)
 res = check(r.content)
 if (res == 1):
-    checkinUrl='https://liangchenyun.xyz/user/checkin'
+    checkinUrl='https://saocaozuo.me/user/checkin'
     s.post(checkinUrl)
     print('签到成功')
 elif (res == 0):
